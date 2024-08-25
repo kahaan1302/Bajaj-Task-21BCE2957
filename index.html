@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Roll Number</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Data Processor</h1>
+      <form id="jsonForm">
+        <textarea
+          id="jsonInput"
+          placeholder='Enter JSON: { "data": ["A","C","z"] }'
+        ></textarea>
+        <button type="submit">Submit</button>
+      </form>
+      <div id="error" class="error"></div>
+      <div id="filterSection" class="hidden">
+        <label for="filter">Filter Response:</label>
+        <select id="filter" multiple>
+          <option value="alphabets">Alphabets</option>
+          <option value="numbers">Numbers</option>
+          <option value="highestLowercase">Highest Lowercase Alphabet</option>
+        </select>
+        <button id="applyFilter">Apply Filter</button>
+      </div>
+      <div id="responseSection" class="hidden">
+        <h2>Response</h2>
+        <pre id="response"></pre>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
